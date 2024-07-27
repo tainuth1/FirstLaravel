@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,600&family=Koh+Santepheap&family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* heigh: ?vh; */
+    background-color: rgb(220, 231, 230);
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+.logo{
+    width: 65px;
+}
+.logo > img{
+    width: 100%;
+}
+.menu-list{
+    display: flex;
+    gap: 2.5rem;
+}
+.head-page{
+    width: 100%;
+    background-color: #000000b3;
+    position: sticky;
+    padding: 2rem;
+    top: 0;
+    box-shadow: 0 0 8px 0;
+    z-index: 10;
+    backdrop-filter: blur(75px);
+    -webkit-backdrop-filter: blur(75px);
+}
+.container-width{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list > a{
+    color: white;
+    transition: all 0.25s;
+}
+.list > a:hover{
+    color: #65acf2;
+    border: 0 0 2px 0 white;
+}
+.icon-toggler{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .navigation{
+        flex-wrap: wrap;
+    }
+    .icon-toggler{
+        color: white;
+        display: block;
+    }
+    .menu-list{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+    }
+    .list{
+        border-bottom: 1px solid rgb(156, 156, 156);
+    }
+}
+
+        /* Javascript */
+.menu-list.show{
+    display: flex;
+}
+        /* End of Navigation Bar */
+
+        /* Hero Section */
+
+.about{
+    padding: 5rem;
+    background-color: #1f1f1fb3;
+}
+.text-contain{
+    color: white;
+    padding: 4rem;
+    /* background-color: dodgerblue; */
+}
+h1{
+    font-size: 3.5rem;
+}
+p{
+    font-size: 20px;
+    margin: 2rem 0 4rem 0;
+}
+.text-contain > a{
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    background-color: #5caeff;
+}
+.image-contain{
+    width: 500px;
+}
+.image-contain > img {
+    width: 100%;
+    animation: float 3s ease infinite;
+}
+@keyframes float {
+    50%{
+        transform: translateY(-20px);
+    }
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media screen and (max-width: 768px){
+    .grid-2{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .image-contain{
+        width: 400px;
+    }
+}
+
+    /* End of about-one */
+
+    /* about-two */
+
+.about-two{
+    margin: 10rem;
+}
+.image-about2{
+    width: 450px;
+}
+.image-about2 > img{
+    width: 100%;
+    border-radius: 40px 0 0 40px;
+}
+.grid-two{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.text-about2 > a{
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    background-color: #5caeff;
+}
+@media screen and (max-width: 768px){
+    .grid-two{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 0 2rem 0 2rem;
+    }
+    .image-about2 > img{
+        width: 100%;
+        border-radius: 40px;
+    }
+}
+
+    /* End of about two */
+
+    /* About three */
+
+/* .about-three{
+    background: radial-gradient(circle, rgba(45,93,218,1) 56%, rgba(97,45,253,1) 100%);
+} */
+.image-one{
+    width: 100%;
+    color: white;
+    position: relative;
+}
+.image-one > img{
+    width: 100%;
+    border-radius: 35% 35% 0 0;
+    /* display: block; */
+}
+.text-item{
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 7.5rem 0 0 6rem;
+}
+.h1-size{
+    font-size: 5rem;
+}
+.text-item > p{
+    line-height: 3.5rem;
+}
+@media screen and (max-width: 768px){
+    .image-one > img{
+        padding: 0.5rem;
+        border-radius: 5px;
+        position: static;
+    }
+    .text-item{
+        width: 100%;
+        color: black;
+        text-align: center;
+        padding: 0 1rem 0 1rem;
+        margin: 0;
+        position: static;
+    }
+    .h1-size{
+        font-size: 2.5rem;
+    }
+}
