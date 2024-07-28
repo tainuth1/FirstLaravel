@@ -9,11 +9,12 @@ Route::get('/', function () {
 
     // Get data from database
     // $users = DB::select('SELECT * FROM students');
-    $users = DB::table('students')->get();
+    // $users = DB::table('students')->get();
     // $users = DB::table('students')->find(1);
     // $users = DB::table('students')->get()->first();
     // $users = DB::table('students')->get()->first();
     // $users = Student::get()->where('gender', 'Male');
+    $users = User::find(4);
 
     // Insert data into database
     // $user = DB::insert("INSERT INTO students (name, gender, age) VALUES(?, ?, ?)", [
@@ -30,6 +31,11 @@ Route::get('/', function () {
     //     'name' => 'Donal Trump',
     //     'gender' => 'Male',
     //     'age' => 65
+    // ]);
+    // $user = User::create([
+    //     'name' => 'Tai Nuth',
+    //     'email' => 'tainuth1@gmail.com',
+    //     'password' => 'Password'
     // ]);
 
     // Update data in database
@@ -48,7 +54,7 @@ Route::get('/', function () {
     // $user = DB::table('students')->where('id', 8)->delete();
     // $user = Student::where('id', 9)->delete();
 
-    dd($users);
+    dd($users->name);
 
 });
 Route::get('/course', function () {
