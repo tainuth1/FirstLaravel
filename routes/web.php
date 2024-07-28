@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Student;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +13,7 @@ Route::get('/', function () {
     // $users = DB::table('students')->find(1);
     // $users = DB::table('students')->get()->first();
     // $users = DB::table('students')->get()->first();
+    // $users = Student::get()->where('gender', 'Male');
 
     // Insert data into database
     // $user = DB::insert("INSERT INTO students (name, gender, age) VALUES(?, ?, ?)", [
@@ -23,6 +26,11 @@ Route::get('/', function () {
     //     'gender' => 'male',
     //     'age' => 19
     // ]);
+    // $user = Student::insert([
+    //     'name' => 'Donal Trump',
+    //     'gender' => 'Male',
+    //     'age' => 65
+    // ]);
 
     // Update data in database
     // $user = DB::update("UPDATE students SET age = ? WHERE id = ?", [
@@ -31,10 +39,14 @@ Route::get('/', function () {
     // $user = DB::table('students')->where('id', 7)->update([
     //     'name' => 'Mey Chethaputi'
     // ]);
+    // $user = Student::where('id', 9)->update([
+    //     'name' => 'Neng Thida'
+    // ]);
 
     //  Delete data from database
     // $user = DB::delete("DELETE FROM students WHERE id = ?", [6]);
     // $user = DB::table('students')->where('id', 8)->delete();
+    // $user = Student::where('id', 9)->delete();
 
     dd($users);
 
