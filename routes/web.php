@@ -19,4 +19,4 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile/avatar', [AvatarController::class, 'update'])->name('profile.avatar');
 });
 
-require __DIR__ . '/auth.php'; 
+require __DIR__ . '/auth.php';

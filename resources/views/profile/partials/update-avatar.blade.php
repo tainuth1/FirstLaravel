@@ -4,8 +4,8 @@
             Avatar Update
         </h2>
 
-        <img width="70" height="70" class="rounded-full" src="{{ "/storage/$user->avatar" }}" alt="Avatar">
-        
+        <img style="width: 70px;height: 70px;object-fit:cover;" class="rounded-full" src="{{ "/storage/$user->avatar" }}" alt="Avatar">
+
     </header>
 
     @if (session('message'))
