@@ -20,6 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::patch('/profile/avatar', [AvatarController::class, 'update'])->name('profile.avatar');
     Route::patch('/profile/cover', [CoverController::class, 'update'])->name('profile.cover');
+    Route::get('/user', [AvatarController::class, 'index'])->name('user');
+    Route::get('/user/detail/{id}', [ProfileController::class, 'detail'])->name('user.detail');
 });
 
 Route::get('/openai', function(){
