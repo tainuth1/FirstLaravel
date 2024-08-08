@@ -15,8 +15,14 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user')" :active="request()->routeIs('user')">
+                    {{-- <x-nav-link :href="route('user')" :active="request()->routeIs('user')">
                         {{ __('User') }}
+                    </x-nav-link> --}}
+                    <x-nav-link :href="route('ticket.create')" :active="request()->routeIs('ticket.create')">
+                        {{ __('Create Ticket') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('ticket.index')" :active="request()->routeIs('ticket.index')">
+                        {{ __('Show Ticket') }}
                     </x-nav-link>
                 </div>
             </div>

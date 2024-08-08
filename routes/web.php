@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoverController;
 use App\Http\Controllers\Profile\AvatarController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 use OpenAI\Laravel\Facades\OpenAI;
 
@@ -22,6 +23,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile/cover', [CoverController::class, 'update'])->name('profile.cover');
     Route::get('/user', [AvatarController::class, 'index'])->name('user');
     Route::get('/user/detail/{id}', [ProfileController::class, 'detail'])->name('user.detail');
+});
+
+Route::middleware('auth')->group(function(){
+    Route::resource('ticket', TicketController::class);
 });
 
 Route::get('/openai', function(){
